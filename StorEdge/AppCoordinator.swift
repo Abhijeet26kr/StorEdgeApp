@@ -14,6 +14,7 @@ protocol Coordinator {
     var navigationController: UINavigationController { get set }
     func start()
 }
+
 class AppCoordinator : Coordinator {
     var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
@@ -23,6 +24,7 @@ class AppCoordinator : Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
     func start() {
         navigateToDashboard()
     }
@@ -57,6 +59,7 @@ class AppCoordinator : Coordinator {
         menuVC.modalTransitionStyle = .crossDissolve
         navigationController.present(menuVC, animated: true, completion: nil)
     }
+    
     func closeMenu() {
         navigationController.dismiss(animated: false, completion: nil)
     }
@@ -73,7 +76,7 @@ class AppCoordinator : Coordinator {
     
     func navigateToOrders() {
         navigationController.dismiss(animated: true, completion: { [self] in
-            let orderVC = storyboard.instantiateViewController(withIdentifier: "OrderViewController") as! OrdersViewController
+            let orderVC = storyboard.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
             let orderViewModel = OrdersViewModel()
             orderViewModel.coordinator = self
             orderVC.viewModel = orderViewModel
@@ -90,6 +93,7 @@ class AppCoordinator : Coordinator {
             navigationController.pushViewController(customersVC, animated: true)
         })
     }
+    
     func navigateToCustomerDetails(customers: Customer) {
         navigationController.dismiss(animated: true, completion: { [self] in
             let customerDetailsVC = storyboard.instantiateViewController(withIdentifier: "CustomerDetailViewController") as! CustomerDetailViewController
@@ -109,4 +113,33 @@ class AppCoordinator : Coordinator {
             navigationController.pushViewController(supportVC, animated: true)
         })
     }
+    func navigateToDeliveryPartners() {
+        navigationController.dismiss(animated: true, completion: { [self] in
+            let deliveryPartnersVC = storyboard.instantiateViewController(withIdentifier: "DeliveryPartnersViewController") as! DeliveryPartnersViewController
+            let deliveryPartnersVM = DeliveryPartnersViewModel()
+            deliveryPartnersVM.coordinator = self
+            deliveryPartnersVC.viewModel = deliveryPartnersVM
+            navigationController.pushViewController(deliveryPartnersVC, animated: true)
+        })
+    }
+    
+//    func showConfirmView() {
+//        guard let confirmVC = storyboard.instantiateViewController(withIdentifier: "ConfirmViewController") as? ConfirmViewController else {return}
+//        let confirmVM = ConfirmViewModel()
+//        confirmVM.coordinator = self
+//        confirmVC.viewModel = confirmVM
+//        navigationController.pushViewController(confirmVC, animated: true)
+//    }
+//    func showPrepareView() {
+//        
+//    }
+//    func showDeliverView() {
+//        
+//    }
+//    func showCompletedView() {
+//        
+//    }
+//    func showCanceledView() {
+//        
+//    }
 }

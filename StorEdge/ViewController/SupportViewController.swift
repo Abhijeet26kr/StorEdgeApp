@@ -29,7 +29,7 @@ class SupportViewController: UIViewController {
             if UIApplication.shared.canOpenURL(emailURL) {
                 UIApplication.shared.open(emailURL, options: [:], completionHandler: nil)
             }else {
-                // Handle the error, e.g., show an alert
+                // Handle error, e.g show an alert
                 print("Can't open mail app.")
             }
         }

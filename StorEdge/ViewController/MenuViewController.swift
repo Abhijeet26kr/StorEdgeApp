@@ -31,6 +31,11 @@ class MenuViewController: UIViewController {
         
     }
     
+    @IBAction func deliveryPartnersTapped(_ sender: UIButton) {
+        viewModel.navigateToDeliveryPartners()
+    }
+    
+    
     @IBAction func supportTapped(_ sender: UIButton) {
         viewModel.navigateToSupport()
     }

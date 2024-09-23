@@ -13,10 +13,10 @@ class CustomersViewController: UIViewController {
     var viewModel = CustomersViewModel()
     
     var customers: [Customer] = [
-        Customer(firstName: "John", lastName: "Doe", dateOfBirth: "06.06.1989", gender: "Male", phoneNumber: "(212) 555-1234", email: "jhdoe13@gmail.com", address: "4567 Apple St, Apartment 2A, Brooklyn, NY 11211", customerSince: "09.11.2022", totalOrders: 134, canceledOrders: 2, preferredPayment: "Apple Pay"),
-        Customer(firstName: "Jane", lastName: "Smith", dateOfBirth: "12.03.1992", gender: "Female", phoneNumber: "(212) 555-5678", email: "janesmith@gmail.com", address: "1234 Orange Ave, Apt 5, New York, NY 10001", customerSince: "01.01.2021", totalOrders: 120, canceledOrders: 1, preferredPayment: "Credit Card"),
-        Customer(firstName: "Sam", lastName: "Wilson", dateOfBirth: "16.09.1987", gender: "Male", phoneNumber: "(212) 555-9012", email: "samwilson13@gmail.com", address: "4567 Apple St, Apartment 3A, Brooklyn, NY 11211", customerSince: "09.11.2020", totalOrders: 101, canceledOrders: 4, preferredPayment: "Apple Pay"),
-        Customer(firstName: "Emily", lastName: "Jones", dateOfBirth: "12.03.1995", gender: "Female", phoneNumber: "(212) 555-3456", email: "janesmith@gmail.com", address: "1234 Orange Ave, Apt 2, New York, NY 10001", customerSince: "01.01.2023", totalOrders: 120, canceledOrders: 3, preferredPayment: "Credit Card"),
+        Customer(image: "customerImage", firstName: "John", lastName: "Doe", dateOfBirth: "06.06.1989", gender: "Male", phoneNumber: "(212) 555-1234", email: "jhdoe13@gmail.com", address: "4567 Apple St, Apartment 2A, Brooklyn, NY 11211", customerSince: "09.11.2022", totalOrders: 134, canceledOrders: 2, preferredPayment: "Apple Pay"),
+        Customer(image: "customerImage", firstName: "Jane", lastName: "Smith", dateOfBirth: "12.03.1992", gender: "Female", phoneNumber: "(212) 555-5678", email: "janesmith@gmail.com", address: "1234 Orange Ave, Apt 5, New York, NY 10001", customerSince: "01.01.2021", totalOrders: 120, canceledOrders: 1, preferredPayment: "Credit Card"),
+        Customer(image: "customerImage", firstName: "Sam", lastName: "Wilson", dateOfBirth: "16.09.1987", gender: "Male", phoneNumber: "(212) 555-9012", email: "samwilson13@gmail.com", address: "4567 Apple St, Apartment 3A, Brooklyn, NY 11211", customerSince: "09.11.2020", totalOrders: 101, canceledOrders: 4, preferredPayment: "Apple Pay"),
+        Customer(image: "customerImage", firstName: "Emily", lastName: "Jones", dateOfBirth: "12.03.1995", gender: "Female", phoneNumber: "(212) 555-3456", email: "janesmith@gmail.com", address: "1234 Orange Ave, Apt 2, New York, NY 10001", customerSince: "01.01.2023", totalOrders: 120, canceledOrders: 3, preferredPayment: "Credit Card"),
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,5 +54,6 @@ extension CustomersViewController: UITableViewDelegate, UITableViewDataSource {
         let customer = customers[sender.tag]
         viewModel.viewDetails(for: customer)
     }
+    
     
 }

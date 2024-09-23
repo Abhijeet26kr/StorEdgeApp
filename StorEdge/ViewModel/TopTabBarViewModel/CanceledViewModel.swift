@@ -6,3 +6,6 @@
 //
 
 import Foundation
+class CanceledViewModel: OrdersViewModel {
+    
+}

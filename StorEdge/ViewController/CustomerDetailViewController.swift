@@ -23,9 +23,11 @@ class CustomerDetailViewController: UIViewController {
     @IBOutlet weak var ordersCancledLabel: UILabel!
     @IBOutlet weak var preferredPaymentLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        customerImage.image = UIImage(named: viewModel.customers.image)
         firstNameLabel.text = viewModel.customers.firstName
         lastNameLabel.text = viewModel.customers.lastName
         dateOfBirthLabel.text = viewModel.customers.dateOfBirth
@@ -41,5 +43,9 @@ class CustomerDetailViewController: UIViewController {
 
     @IBAction func SideMenuButton(_ sender: UIButton) {
         viewModel.openMenu()
+    }
+    
+    @IBAction func BackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }

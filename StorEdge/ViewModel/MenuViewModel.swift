@@ -29,4 +29,7 @@ class MenuViewModel {
     func navigateToCustomers() {
         coordinator.navigateToCustomers()
     }
+    func navigateToDeliveryPartners() {
+        coordinator.navigateToDeliveryPartners()
+    }
 }

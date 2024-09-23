@@ -8,6 +8,7 @@
 import Foundation
 
 struct Customer {
+    let image: String
     let firstName: String
     let lastName: String
     let dateOfBirth: String

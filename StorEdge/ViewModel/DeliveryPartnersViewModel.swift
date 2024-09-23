@@ -6,3 +6,10 @@
 //
 
 import Foundation
+class DeliveryPartnersViewModel {
+    var coordinator: AppCoordinator!
+    
+    func openMenu() {
+        coordinator.presentMenu()
+    }
+}

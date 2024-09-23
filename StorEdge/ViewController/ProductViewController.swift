@@ -14,7 +14,6 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var productTableView: UITableView!
     
     var products: [Product] = [
-        
         Product(image: "zesty_chicken_wrap", name: "Zesty Chicken Wrap", availableQty: 23, lastUpdate: "12 Jun 23 17:34"),
         Product(image: "BBQ_Bacon_Burger", name: "BBQ Bacon Burger", availableQty: 56, lastUpdate: "12 Jun 23 17:34"),
         Product(image: "Southwest_Salad_Bowl", name: "Southwest Salad Bowl", availableQty: 2, lastUpdate: "12 Jun 23 17:34"),
