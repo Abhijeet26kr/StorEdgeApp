@@ -14,15 +14,15 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var productTableView: UITableView!
     
     var products: [Product] = [
-        Product(image: "zesty_chicken_wrap", name: "Zesty Chicken Wrap", availableQty: 23, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "BBQ_Bacon_Burger", name: "BBQ Bacon Burger", availableQty: 56, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Southwest_Salad_Bowl", name: "Southwest Salad Bowl", availableQty: 2, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Cheesy_Garlic_Breadsticks", name: "Cheesy Garlic Breadsticks", availableQty: 14, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Grilled_Veggie_Panini", name: "Grilled Veggie Panini", availableQty: 0, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Crispy_Fish_Tacos", name: "Crispy Fish Tacos", availableQty: 10, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Bacon_Ranch_Fries", name: "Bacon Ranch Fries", availableQty: 10, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Chicken_Wings", name: "Chicken Wings", availableQty: 10, lastUpdate: "12 Jun 23 17:34"),
-        Product(image: "Veggie_Lover's_Pizza", name: "Veggie Lover's Pizza", availableQty: 0, lastUpdate: "12 Jun 23 17:34")
+        Product(image: "zesty_chicken_wrap", name: "Zesty Chicken Wrap", availableQty: 23, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "BBQ_Bacon_Burger", name: "BBQ Bacon Burger", availableQty: 56, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Southwest_Salad_Bowl", name: "Southwest Salad Bowl", availableQty: 2, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Cheesy_Garlic_Breadsticks", name: "Cheesy Garlic Breadsticks", availableQty: 4, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Grilled_Veggie_Panini", name: "Grilled Veggie Panini", availableQty: 0, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Crispy_Fish_Tacos", name: "Crispy Fish Tacos", availableQty: 10, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Bacon_Ranch_Fries", name: "Bacon Ranch Fries", availableQty: 10, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Chicken_Wings", name: "Chicken Wings", availableQty: 10, lastUpdate: "12 Jun 23 | 17:34"),
+        Product(image: "Veggie_Lover's_Pizza", name: "Veggie Lover's Pizza", availableQty: 0, lastUpdate: "12 Jun 23 | 17:34")
     ]
     
     override func viewDidLoad() {
@@ -37,23 +37,40 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         viewModel.openMenu()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
+        let product = products[indexPath.section]
         
-        let product = products[indexPath.row]
+        if product.availableQty >= 10 {
+            cell.availableQtyLabel.textColor = UIColor.green
+        }else if product.availableQty < 10 && product.availableQty > 0 {
+            cell.availableQtyLabel.textColor = UIColor.systemOrange
+        }else {
+            cell.availableQtyLabel.textColor = UIColor.red
+        }
         
         cell.productImageView.image = UIImage(named: product.image)
         cell.productNameLabel.text = product.name
-        cell.availableQtyLabel.text = "Available Qty: \(product.availableQty)"
-        cell.lastUpdateLabel.text = "Last Update: \(product.lastUpdate)"
+        cell.availableQtyLabel.text = "Available Qty    : \(product.availableQty)"
+        cell.lastUpdateLabel.text = "Last Update     : \(product.lastUpdate)"
+        
+        cell.updateProductButton.tag = indexPath.section
+        cell.updateProductButton.addTarget(self, action: #selector(updateButtonTapped(_ :)), for: .touchUpInside)
 
         return cell
     }
-    
+    @objc func updateButtonTapped(_ sender: UIButton){
+//        let product = products[sender.tag]
+        viewModel.navigateToUpdate()
+    }
    
 }

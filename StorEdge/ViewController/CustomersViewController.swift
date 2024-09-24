@@ -50,6 +50,7 @@ extension CustomersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.viewDetails.addTarget(self, action: #selector(viewButtonTapped(_ :)), for: .touchUpInside)
         return cell
     }
+   
     @objc func viewButtonTapped(_ sender: UIButton){
         let customer = customers[sender.tag]
         viewModel.viewDetails(for: customer)

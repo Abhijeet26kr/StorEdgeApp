@@ -74,6 +74,16 @@ class AppCoordinator : Coordinator {
         })
     }
     
+    func navigateToUpdateProduct() {
+        navigationController.dismiss(animated: true, completion: { [self] in
+            let updateProductVC = storyboard.instantiateViewController(withIdentifier: "UpdateProductViewController") as! UpdateProductViewController
+            let updateProductVM = UpdateProductViewModel()
+            updateProductVM.coordinator = self
+            updateProductVC.viewModel = updateProductVM
+            navigationController.pushViewController(updateProductVC, animated: true)
+        })
+    }
+    
     func navigateToOrders() {
         navigationController.dismiss(animated: true, completion: { [self] in
             let orderVC = storyboard.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
@@ -120,6 +130,16 @@ class AppCoordinator : Coordinator {
             deliveryPartnersVM.coordinator = self
             deliveryPartnersVC.viewModel = deliveryPartnersVM
             navigationController.pushViewController(deliveryPartnersVC, animated: true)
+        })
+    }
+    
+    func navigateToDeliveryPartnersInfo(deliveryPartner: DeliveryPartner) {
+        navigationController.dismiss(animated: true, completion: { [self] in
+            let deliveryPartnersInfoVC = storyboard.instantiateViewController(withIdentifier: "DeliveryPartnersInfoViewController") as! DeliveryPartnersInfoViewController
+            let deliveryPartnersInfoVM = DeliveryPartnerInfoViewModel(deliveryPartner: deliveryPartner)
+            deliveryPartnersInfoVM.coordinator = self
+            deliveryPartnersInfoVC.viewModel = deliveryPartnersInfoVM
+            navigationController.pushViewController(deliveryPartnersInfoVC, animated: true)
         })
     }
     

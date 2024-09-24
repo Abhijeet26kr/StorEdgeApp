@@ -12,4 +12,7 @@ class DeliveryPartnersViewModel {
     func openMenu() {
         coordinator.presentMenu()
     }
+    func naviagteToInfo(for deliveryPartner: DeliveryPartner) {
+        coordinator.navigateToDeliveryPartnersInfo(deliveryPartner: deliveryPartner)
+    }
 }

@@ -43,6 +43,13 @@
 		84843BD92C9C2BAF005D5F05 /* CustomersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84843BD72C9C2BAF005D5F05 /* CustomersTableViewCell.xib */; };
 		84843BDB2C9C35DB005D5F05 /* CustomerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843BDA2C9C35DB005D5F05 /* CustomerDetailViewModel.swift */; };
 		84843BDD2C9C3643005D5F05 /* CustomerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843BDC2C9C3643005D5F05 /* CustomerDetailViewController.swift */; };
+		84850D352CA2780800F714F7 /* DeliveryPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D342CA2780800F714F7 /* DeliveryPartner.swift */; };
+		84850D372CA279FB00F714F7 /* DeliveryPartnerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D362CA279FB00F714F7 /* DeliveryPartnerInfoViewModel.swift */; };
+		84850D3A2CA285D200F714F7 /* DeliveryPartnersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84850D392CA285D200F714F7 /* DeliveryPartnersTableViewCell.xib */; };
+		84850D3B2CA285D200F714F7 /* DeliveryPartnersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D382CA285D200F714F7 /* DeliveryPartnersTableViewCell.swift */; };
+		84850D3D2CA29EBD00F714F7 /* DeliveryPartnersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D3C2CA29EBD00F714F7 /* DeliveryPartnersInfoViewController.swift */; };
+		84850D3F2CA2CB0A00F714F7 /* UpdateProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D3E2CA2CB0A00F714F7 /* UpdateProductViewModel.swift */; };
+		84850D412CA2CB5D00F714F7 /* UpdateProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850D402CA2CB5D00F714F7 /* UpdateProductViewController.swift */; };
 		848519A72C99666100F5BBFF /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848519A62C99666100F5BBFF /* ProductViewModel.swift */; };
 		848519A82C998DAA00F5BBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84822EFC2C9804880001E1BE /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -86,6 +93,13 @@
 		84843BD72C9C2BAF005D5F05 /* CustomersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomersTableViewCell.xib; sourceTree = "<group>"; };
 		84843BDA2C9C35DB005D5F05 /* CustomerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewModel.swift; sourceTree = "<group>"; };
 		84843BDC2C9C3643005D5F05 /* CustomerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewController.swift; sourceTree = "<group>"; };
+		84850D342CA2780800F714F7 /* DeliveryPartner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPartner.swift; sourceTree = "<group>"; };
+		84850D362CA279FB00F714F7 /* DeliveryPartnerInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPartnerInfoViewModel.swift; sourceTree = "<group>"; };
+		84850D382CA285D200F714F7 /* DeliveryPartnersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPartnersTableViewCell.swift; sourceTree = "<group>"; };
+		84850D392CA285D200F714F7 /* DeliveryPartnersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryPartnersTableViewCell.xib; sourceTree = "<group>"; };
+		84850D3C2CA29EBD00F714F7 /* DeliveryPartnersInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPartnersInfoViewController.swift; sourceTree = "<group>"; };
+		84850D3E2CA2CB0A00F714F7 /* UpdateProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductViewModel.swift; sourceTree = "<group>"; };
+		84850D402CA2CB5D00F714F7 /* UpdateProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductViewController.swift; sourceTree = "<group>"; };
 		848519A62C99666100F5BBFF /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,11 +178,13 @@
 				84822F0E2C980B590001E1BE /* DashBoardViewController.swift */,
 				84822F122C9853540001E1BE /* MenuViewController.swift */,
 				84822F162C9853C00001E1BE /* ProductViewController.swift */,
+				84850D402CA2CB5D00F714F7 /* UpdateProductViewController.swift */,
 				84843BC42C9BDD91005D5F05 /* SupportViewController.swift */,
 				84843BCA2C9BF2A1005D5F05 /* CustomersViewController.swift */,
 				84843BDC2C9C3643005D5F05 /* CustomerDetailViewController.swift */,
 				848329692C9AB1260053C0B7 /* OrdersViewController.swift */,
 				848211C72CA16341000D435F /* DeliveryPartnersViewController.swift */,
+				84850D3C2CA29EBD00F714F7 /* DeliveryPartnersInfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -185,6 +201,8 @@
 				84843BDA2C9C35DB005D5F05 /* CustomerDetailViewModel.swift */,
 				848329672C9AB1030053C0B7 /* OrdersViewModel.swift */,
 				848211C52CA16318000D435F /* DeliveryPartnersViewModel.swift */,
+				84850D362CA279FB00F714F7 /* DeliveryPartnerInfoViewModel.swift */,
+				84850D3E2CA2CB0A00F714F7 /* UpdateProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +212,7 @@
 			children = (
 				84843BCD2C9BFE17005D5F05 /* Customer.swift */,
 				84843BD42C9C2975005D5F05 /* Product.swift */,
+				84850D342CA2780800F714F7 /* DeliveryPartner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +224,8 @@
 				8483295D2C9AA0FC0053C0B7 /* ProductTableViewCell.swift */,
 				84843BD62C9C2BAF005D5F05 /* CustomersTableViewCell.swift */,
 				84843BD72C9C2BAF005D5F05 /* CustomersTableViewCell.xib */,
+				84850D382CA285D200F714F7 /* DeliveryPartnersTableViewCell.swift */,
+				84850D392CA285D200F714F7 /* DeliveryPartnersTableViewCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -272,6 +293,7 @@
 				84822F032C98048B0001E1BE /* Base in Resources */,
 				84843BD92C9C2BAF005D5F05 /* CustomersTableViewCell.xib in Resources */,
 				84822EFE2C9804880001E1BE /* Base in Resources */,
+				84850D3A2CA285D200F714F7 /* DeliveryPartnersTableViewCell.xib in Resources */,
 				848519A82C998DAA00F5BBFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,12 +314,18 @@
 				8483296A2C9AB1260053C0B7 /* OrdersViewController.swift in Sources */,
 				848211CB2CA16A12000D435F /* ConfirmViewController.swift in Sources */,
 				84843BD52C9C2975005D5F05 /* Product.swift in Sources */,
+				84850D3D2CA29EBD00F714F7 /* DeliveryPartnersInfoViewController.swift in Sources */,
 				84843BC72C9BDDB5005D5F05 /* SupportViewModel.swift in Sources */,
+				84850D3F2CA2CB0A00F714F7 /* UpdateProductViewModel.swift in Sources */,
 				848211DA2CA16B6A000D435F /* DeliverViewModel.swift in Sources */,
+				84850D412CA2CB5D00F714F7 /* UpdateProductViewController.swift in Sources */,
 				84822F0B2C9809DD0001E1BE /* AppCoordinator.swift in Sources */,
 				84822F172C9853C00001E1BE /* ProductViewController.swift in Sources */,
 				848211DE2CA16CBD000D435F /* CanceledViewModel.swift in Sources */,
+				84850D372CA279FB00F714F7 /* DeliveryPartnerInfoViewModel.swift in Sources */,
 				848211D32CA16A81000D435F /* CanceledViewController.swift in Sources */,
+				84850D352CA2780800F714F7 /* DeliveryPartner.swift in Sources */,
+				84850D3B2CA285D200F714F7 /* DeliveryPartnersTableViewCell.swift in Sources */,
 				848211CD2CA16A2A000D435F /* PrepareViewController.swift in Sources */,
 				84843BD82C9C2BAF005D5F05 /* CustomersTableViewCell.swift in Sources */,
 				84843BC92C9BF28C005D5F05 /* CustomersViewModel.swift in Sources */,

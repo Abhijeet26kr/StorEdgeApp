@@ -13,4 +13,7 @@ class ProductViewModel {
     func openMenu() {
         coordinator.presentMenu()
     }
+    func navigateToUpdate() {
+        coordinator.navigateToUpdateProduct()
+    }
 }
